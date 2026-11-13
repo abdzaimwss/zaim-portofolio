@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Personal portfolio website" />
+    <title>my portofolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container nav-inner">
+        <a class="brand" href="#home">Abdullah Zaim Wisam<span></span></a>
+        <button class="menu-toggle" aria-label="Buka menu" aria-expanded="false">☰</button>
+        <ul class="nav-links">
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#project">Project</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <header class="hero container" id="home">
+        <div class="hero-topline"></div>
+        <h1 class="hero-title">PORTOFOLIO</h1>
+
+        <div class="portrait-wrap">
+          <img
+            class="portrait"
+            src="img/foto-saya.png"
+            alt="Foto Abdullah Zaim Wisam"
+            onerror="
+              this.style.display = 'none';
+              document.getElementById('photoFallback').style.display = 'flex';
+            "
+          />
+          <div class="photo-placeholder" id="photoFallback">
+            <strong>YOUR PHOTO</strong>
+          </div>
+        </div>
+
+        <div class="hero-bottomline">
+          <div class="hero-meta"><strong>Abdullah Zaim Wisam</strong><small>Web Developer / Student</small></div>
+        </div>
+      </header>
+
+      <section class="content-section" id="about">
+        <div class="container about-grid">
+          <div class="reveal">
+            <h2 class="section-heading">ABOUT<br /><span>ME.</span></h2>
+          </div>
+          <div class="about-copy reveal">
+            <p>Halo! Saya <strong style="color: var(--cream)">Abdullah Zaim Wisam</strong>, saat ini saya bersekolah di smkn 5 malang dengan jurusan RPL atau rekayasa perangkat lunak.</p>
+            <p>
+              Saya dulu bersekolah di SMP Negeri 18 Malang, awalnya saya masuk di jurusan tataboga karena saya sudah mempunyai basic di jurusan tersebut, dan sayang nya di smkn 5 tidak ada tataboga jadi saya di anjurkan memilih RPL oleh
+              ayah, padahal saya tidak bisa sama sekli jurusan ini, dan pada akhirnya saya harus pasrah menerima jurusan ini.
+            </p>
+            <div class="info-pills"><span class="pill">HTML & CSS</span><span class="pill">PHP</span><span class="pill">UI Design</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="project">
+        <div class="container">
+          <div class="projects-head reveal">
+            <div>
+              <h2 class="section-heading">MY <span>PROJECTS</span></h2>
+            </div>
+          </div>
+          <div class="project-grid">
+            <article
+              class="project-card reveal"
+              tabindex="0"
+              role="button"
+              aria-haspopup="dialog"
+              data-title="WEB PAYKU"
+              data-description="PayKu adalah aplikasi pembayaran digital yang memudahkan pengguna melakukan transaksi keuangan secara praktis, cepat, dan aman. Dengan tampilan yang sederhana dan fitur yang mudah digunakan, PayKu membantu mengelola kebutuhan pembayaran dalam satu aplikasi."
+            >
+              <div class="project-image-wrap">
+                <img
+                  class="project-image"
+                  src="img/project-1.jpg"
+                  alt="Preview project WEB PAYKU"
+                  onerror="
+                    this.style.display = 'none';
+                    this.nextElementSibling.style.display = 'flex';
+                  "
+                />
+                <div class="project-image-placeholder">
+                  <span>PROJECT 01</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <div>
+                  <h3>WEB PAYKU</h3>
+                  <p class="project-short-desc">
+                    PayKu adalah aplikasi pembayaran digital yang memudahkan pengguna melakukan transaksi keuangan secara praktis, cepat, dan aman. Dengan tampilan yang sederhana dan fitur yang mudah digunakan, PayKu membantu mengelola
+                    kebutuhan pembayaran dalam satu aplikasi.
+                  </p>
+                </div>
+                <span class="project-arrow">↗</span>
+              </div>
+            </article>
+            <article
+              class="project-card reveal"
+              tabindex="0"
+              role="button"
+              aria-haspopup="dialog"
+              data-title="Information Coban Rondo"
+              data-description="Coban Rondo merupakan destinasi wisata alam di Malang, Jawa Timur, yang terkenal dengan keindahan air terjun, udara sejuk, dan suasana hutan yang asri. Tempat ini cocok untuk menikmati keindahan alam dan menghabiskan waktu bersama keluarga maupun teman."
+            >
+              <div class="project-image-wrap">
+                <img
+                  class="project-image"
+                  src="img/project-2.jpg"
+                  alt="Preview project Information Coban Rondo"
+                  onerror="
+                    this.style.display = 'none';
+                    this.nextElementSibling.style.display = 'flex';
+                  "
+                />
+                <div class="project-image-placeholder">
+                  <span>PROJECT 02</span>
+                </div>
+              </div>
+              <div class="project-info">
+                <div>
+                  <h3>Information Coban Rondo</h3>
+                  <p class="project-short-desc">
+                    Coban Rondo merupakan destinasi wisata alam di Malang, Jawa Timur, yang terkenal dengan keindahan air terjun, udara sejuk, dan suasana hutan yang asri. Tempat ini cocok untuk menikmati keindahan alam dan menghabiskan
+                    waktu bersama keluarga maupun teman.
+                  </p>
+                </div>
+                <span class="project-arrow">↗</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <dialog class="project-modal" id="projectModal" aria-labelledby="modalTitle">
+        <div class="modal-content">
+          <button class="modal-close" type="button" aria-label="Tutup detail project">×</button>
+          <p class="eyebrow">PROJECT DETAILS</p>
+          <h3 id="modalTitle">Project title</h3>
+          <p class="modal-category" id="modalCategory"></p>
+          <p class="modal-description" id="modalDescription"></p>
+        </div>
+      </dialog>
+
+      <section class="content-section" id="contact">
+        <div class="container contact-layout">
+          <div class="contact-intro reveal">
+            <h2 class="contact-title">CONTACT<br /><span>ME.</span></h2>
+            <div class="contact-info-card">
+              <p>
+                <span class="contact-icon">✉</span><span><small>EMAIL</small><a href="mailto:emailkamu@gmail.com">emailkamu@gmail.com</a></span>
+              </p>
+              <p>
+                <span class="contact-icon">↗</span><span><small>INSTAGRAM</small><a href="https://instagram.com/" target="_blank" rel="noreferrer">@username</a></span>
+              </p>
+              <p>
+                <span class="contact-icon">⌖</span><span><small>LOCATION</small><strong>Malang, Indonesia</strong></span>
+              </p>
+            </div>
+          </div>
+          <form class="contact-form reveal" id="contactForm">
+            <div class="form-heading">
+              <h3>SEND A MASSAGE.</h3>
+            </div>
+            <div class="form-row">
+              <label>Name<input type="text" name="name" placeholder="Nama kamu" autocomplete="name" required /></label>
+              <label>Email<input type="email" name="email" placeholder="nama@email.com" autocomplete="email" required /></label>
+            </div>
+            <div class="form-row">
+              <label>Phone<input type="tel" name="phone" placeholder="081234567890" autocomplete="tel" required /></label>
+            </div>
+            <label class="message-label">Message<textarea name="message" rows="5" placeholder="Tulis pesan kamu di sini..." required></textarea></label>
+            <button class="contact-submit" type="submit">SEND MESSAGE <span>↗</span></button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <span>© <span id="year"></span> ZAIM — PORTFOLIO</span>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
